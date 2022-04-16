@@ -4,7 +4,7 @@ const Footer = () => {
 	const today = new Date();
 	return (
 		<div className="">
-			<footer className=" md:fixed md:bottom-0 flex mx-auto w-full  items-center justify-center text-yellow-400  dark:bg-blue-900">
+			<footer className=" md:fixed md:bottom-0 flex mx-auto w-full  items-center justify-center text-yellow-400 ">
 				<p className="text-sm">
 					{' '}
 					Copyright AWP Coding &copy; {today.getFullYear()}

@@ -11,7 +11,7 @@ export default function Home({ productList }) {
 				<meta name="description" content="Best pizzas in town" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className=" ">
+			<div className="dark:bg-black ">
 				<ProductList productList={productList} />
 			</div>
 		</>
