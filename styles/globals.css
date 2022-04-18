@@ -26,9 +26,6 @@
 		font-display: swap;
 		font-style: normal;
 	}
-	li {
-		@apply p-4;
-	}
 
 	h1 {
 		@apply text-3xl md:text-4xl font-bold;

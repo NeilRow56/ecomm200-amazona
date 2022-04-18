@@ -4,6 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { HiOutlineMenuAlt4 } from 'react-icons/hi';
 import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
 
+import Dropdown from '../components/Dropdown';
 import {
 	FaFacebook,
 	FaTwitter,
@@ -58,7 +59,7 @@ function Navbar() {
 	return (
 		<div className="flex  w-full justify-between items-center h-18 px-4 fixed z-10 bg-gray-700 text-white dark:bg-gray-900  ">
 			<div className="flex w-full justify-between max-w-[1300px] mx-auto">
-				<div className="flex ">
+				<div className="flex  ">
 					<div className="my-auto  ">
 						<div className=' mb-2 font-["Pacifico"]'>
 							<h2
@@ -69,33 +70,43 @@ function Navbar() {
 							</h2>
 						</div>
 					</div>
-					<div className=" ml-4  sm:ml-5 my-auto  ">
+					<div className=" ml-4  sm:ml-5 my-auto hidden xl:block  ">
 						<BsFillTelephoneOutboundFill
 							size={25}
 							className="mb-2"
 						/>
 					</div>
 					<div className="ml-4 sm:ml-10 my-auto">
-						<h5 className="lg:text-[18px] xl:text-[22px]">
+						<h5 className="hidden sm:block text-sm md:text-[14px] lg:text-[18px] xl:text-[22px]">
 							012 345 678
 						</h5>
 					</div>
-					<div className="my-auto ml-4 sm:ml-8 md:ml-40 xl:ml-48">
+					<div className="my-auto ml-6  sm:ml-6 md:ml-40 xl:ml-48">
 						{renderThemeChanger()}
 					</div>
 				</div>
-				<ul className="hidden lg:flex items-center">
+				<div className="min-w-[100px] hidden md:block my-auto">
+					<form className=" px-8 ">
+						<input
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+							id="search"
+							type="text"
+							placeholder="Search"
+						/>
+					</form>
+				</div>
+				<ul className="hidden lg:flex items-center space-x-4">
 					<Link href="/" passHref>
 						<li className="cursor-pointer">
-							<a>Homepage </a>
+							<a>Products </a>
 						</li>
 					</Link>
-					<li>Products</li>
-					<li>Menu</li>
-					<li>Events</li>
-					<li>Blog</li>
-					<li>Contact</li>
+
+					<li>Contact us</li>
 				</ul>
+				<div className="my-auto mr-2">
+					<Dropdown />
+				</div>
 			</div>
 			{/* Hamburger  */}
 			<div onClick={handleNav} className="lg:hidden z-10  ">
